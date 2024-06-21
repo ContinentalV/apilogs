@@ -10,6 +10,7 @@ import logsBanRoute from "./routes/logsBanRoute";
 import {errorHandler} from "./middleware/errorMiddleware";
 import {NotFoundError} from "./classes/Error";
 import logsSocialsRoute from "./routes/logsSocialsRoute";
+import chalk from "chalk";
 
 
 
@@ -30,6 +31,11 @@ app.use("/api/v1/indexes", indexRoute);
 
 
 app.use((req, res, next) => {
+    console.log(chalk.green('===================='));
+    console.log(chalk.blue('URL de la requête:'), chalk.yellow(req.url));
+    console.log(chalk.blue('Adresse IP de l\'auteur:'), chalk.yellow(req.ip));
+    console.log(chalk.blue('Query:'), chalk.yellow(JSON.stringify(req.query)));
+    console.log(chalk.green('===================='));
     next(new NotFoundError());
 });
 app.use(errorHandler);
