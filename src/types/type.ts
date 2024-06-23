@@ -45,6 +45,47 @@ export interface ILogsSocials {
   description: string;
   discord: string;
   actions: string;
+}
 
+export interface ILogsEntreprise {
+    timestamp: Number;
+    category: string;
+    title: string;
+    steamName: string;
+    license: string;
+    montant: number;
+    actions: {
+        message: string;
+        licenceEmployer: string;
+    }
 
+}
+
+export interface ILogsIllegal {
+timestamp: Number;
+    category: string;
+    title: string;
+    steamName: string;
+    license: string;
+    montant: number;
+    actions: {
+        message: string;
+        item: string;
+    }
+}
+
+export interface ILogsInventory {
+
+    timestamp: Number;
+    category: string;
+    title: string;
+    steamName: string;
+    license: string;
+    idIngame: number;
+    item: string;
+    quantity: number;
+    actions: {
+        message: string;
+        receiverPlayer: string;
+    }
 }

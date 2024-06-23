@@ -49,6 +49,10 @@ query.montant = genrateFilterMontant(montant)
                 {expiration: {$regex: search, $options: 'i'}},
                 {author: {$regex: search, $options: 'i'}},
                 {actions: {$regex: search, $options: 'i'}},
+                {"actions.message": {$regex: search, $options: 'i'}},
+                {"actions.item": {$regex: search, $options: 'i'}},
+                {"actions.licenceEmployer": {$regex: search, $options: 'i'}},
+                {"actions.receiverPlayer": {$regex: search, $options: 'i'}},
             ]
         }
     }
