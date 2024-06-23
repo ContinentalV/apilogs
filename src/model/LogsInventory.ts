@@ -46,6 +46,10 @@ const LogsInventorySchema = new mongoose.Schema({
 
 });
 interface IInventoryModel extends ILogsInventory, mongoose.Document {}
+LogsInventorySchema.index({ category: 1 });
+LogsInventorySchema.index({ timestamp: 1 });
+LogsInventorySchema.index({ title: 1 });
+LogsInventorySchema.index({ title: 'text', category: 'text', steamName: 'text', license: 'text', idIngame: 'text', item: 'text', quantity: 'text', actions: 'text'  });
 
 
 export default mongoose.model<IInventoryModel>("LogsInventory", LogsInventorySchema);

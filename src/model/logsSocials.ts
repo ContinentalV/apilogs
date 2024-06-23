@@ -34,16 +34,30 @@ const logsSocialsSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    // a voir si
     actions: {
-        type: String,
-        required: true
+       idPost: {type: Number, required: false},
+      message: {type: String, required: true},
+      telNumber: {type: String, required: false},
+      time: {type: String, required: false},
+      answeringCall: {type: String, required: false},
+      sms: {type: String, required: false},
+      instaPhotoUrl: {type: String, required: false},
+     twitterContent: {type: String, required: false},
+     twitterAttachment:{type: String, required: false},
+     yellowPageContent: {   type: String, required: false},
+     yellowPageAttachment: {   type: String, required: false},
+     marketPlaceContent: {   type: String, required: false},
+     marketPlaceAttachment: {   type: String, required: false},
+     portefueilleContent: {   type: String, required: false},
+     portefeuilleActions: {   type: String, required: false,},
+     darkChatContent: {   type: String, required: false},
+     servicesContent: {type: String, required: false},
+     tikttokContent: {type: String, required: false},
+     uploadsContent: {type: String, required: false},
+     uploadsAttachment: {type: String, required: false},
+
     }
-
-
-
-
-
-
 
 });
 

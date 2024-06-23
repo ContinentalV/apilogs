@@ -37,6 +37,10 @@ const LogsIllegalSchema = new mongoose.Schema({
 
 });
 interface IillegalModel extends ILogsIllegal, mongoose.Document {}
+LogsIllegalSchema.index({ category: 1 });
+LogsIllegalSchema.index({ timestamp: 1 });
+LogsIllegalSchema.index({ title: 1 });
+LogsIllegalSchema.index({ title: 'text', category: 'text', steamName: 'text', license: 'text', montant: 'text', actions: 'text'  });
 
 
 export default mongoose.model<IillegalModel>("LogsIllegal", LogsIllegalSchema);

@@ -44,7 +44,29 @@ export interface ILogsSocials {
   nomSteam: string;
   description: string;
   discord: string;
-  actions: string;
+    actions: {
+        idPost?: number;
+        message: string;
+        telNumber?: string;
+        time?: string;
+        answeringCall?: string;
+        sms?: string;
+        instaPhotoUrl?: string;
+        twitterContent?: string;
+        twitterAttachment?: string;
+        yellowPageContent?: string;
+        yellowPageAttachment?: string;
+        marketPlaceContent?: string;
+        marketPlaceAttachment?: string;
+        portefueilleContent?: string;
+        portefeuilleActions?: string;
+        darkChatContent?: string;
+        servicesContent?: string;
+        tikttokContent?: string;
+        uploadsContent?: string;
+        uploadsAttachment?: string;
+    }
+
 }
 
 export interface ILogsEntreprise {
@@ -88,4 +110,15 @@ export interface ILogsInventory {
         message: string;
         receiverPlayer: string;
     }
+}
+
+
+export interface ILogsStaff {
+    timestamp: Number;
+    category: string;
+    title: string;
+    steamName: string;
+    license: string;
+
+
 }

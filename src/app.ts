@@ -15,6 +15,7 @@ import chalk from "chalk";
 import logsInventoryRoute from "./routes/logsInventoryRoute";
 import logsEntrepriseRoute from "./routes/logsEntrepriseRoute";
 import logsIllegalRoute from "./routes/logsIllegalRoute";
+import logsStaffRoute from "./routes/logsStaffRoute";
 
 
 
@@ -34,6 +35,7 @@ app.use("/api/v1/logs/socials",logsSocialsRoute)
 app.use("/api/v1/logs/entreprise", logsEntrepriseRoute)
 app.use("/api/v1/logs/illegal", logsIllegalRoute)
 app.use("/api/v1/logs/inventory", logsInventoryRoute)
+app.use("/api/v1/logs/staff", logsStaffRoute)
 app.use("/api/v1/indexes", indexRoute);
 
 

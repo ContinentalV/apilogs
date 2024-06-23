@@ -30,9 +30,6 @@ if(montant){
 query.montant = genrateFilterMontant(montant)
     }
 
-
-
-
     if (search) {
         query = {
             ...query,
@@ -53,6 +50,25 @@ query.montant = genrateFilterMontant(montant)
                 {"actions.item": {$regex: search, $options: 'i'}},
                 {"actions.licenceEmployer": {$regex: search, $options: 'i'}},
                 {"actions.receiverPlayer": {$regex: search, $options: 'i'}},
+                {"actions.message": {$regex: search, $options: 'i'}},
+                {"actions.telNumber": {$regex: search, $options: 'i'}},
+                {"actions.time": {$regex: search, $options: 'i'}},
+                {"actions.answeringCall": {$regex: search, $options: 'i'}},
+                {"actions.sms": {$regex: search, $options: 'i'}},
+                {"actions.instaPhotoUrl": {$regex: search, $options: 'i'}},
+                {"actions.twitterContent": {$regex: search, $options: 'i'}},
+                {"actions.twitterAttachment": {$regex: search, $options: 'i'}},
+                {"actions.yellowPageContent": {$regex: search, $options: 'i'}},
+                {"actions.yellowPageAttachment": {$regex: search, $options: 'i'}},
+                {"actions.marketPlaceContent": {$regex: search, $options: 'i'}},
+                {"actions.marketPlaceAttachment": {$regex: search, $options: 'i'}},
+                {"actions.portefueilleContent": {$regex: search, $options: 'i'}},
+                {"actions.portefeuilleActions": {$regex: search, $options: 'i'}},
+                {"actions.darkChatContent": {$regex: search, $options: 'i'}},
+                {"actions.servicesContent": {$regex: search, $options: 'i'}},
+                {"actions.tikttokContent": {$regex: search, $options: 'i'}},
+                {"actions.uploadsContent": {$regex: search, $options: 'i'}},
+                {"actions.uploadsAttachment": {$regex: search, $options: 'i'}},
             ]
         }
     }

@@ -36,6 +36,10 @@ const LogsEntrepriseSchema = new mongoose.Schema({
 
 });
 interface IEntrepriseModel extends ILogsEntreprise, mongoose.Document {}
+LogsEntrepriseSchema.index({ category: 1 });
+LogsEntrepriseSchema.index({ timestamp: 1 });
+LogsEntrepriseSchema.index({ title: 1 });
+LogsEntrepriseSchema.index({ title: 'text', category: 'text', steamName: 'text', license: 'text', montant: 'text', actions: 'text'  });
 
 
 export default mongoose.model<IEntrepriseModel>("LogsEntreprise", LogsEntrepriseSchema);
