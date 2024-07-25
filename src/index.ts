@@ -1,10 +1,10 @@
-import express, { Request, Response } from 'express';
+import  { Request, Response } from 'express';
 import dotenv from 'dotenv';
-import morgan from "morgan";
+
 import app from './app';
-import mongoose from 'mongoose';
+
 import dbConnect from "./config/database";
-import logsRoute from "./routes/logsRoute";
+
 
 dotenv.config();
 

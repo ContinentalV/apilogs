@@ -120,5 +120,22 @@ export interface ILogsStaff {
     steamName: string;
     license: string;
 
+}
+
+export interface iLogsCoffre{
+
+    timestamp: Number;
+    category: string;
+    title: string;
+    steamName: string;
+    license: string;
+    idIngame: number;
+    item: string;
+    quantity: number;
+    actions: {
+        message: string;
+        namePlayer?: string;
+        plaque?:string;
+    }
 
 }

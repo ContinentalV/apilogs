@@ -16,6 +16,7 @@ import logsInventoryRoute from "./routes/logsInventoryRoute";
 import logsEntrepriseRoute from "./routes/logsEntrepriseRoute";
 import logsIllegalRoute from "./routes/logsIllegalRoute";
 import logsStaffRoute from "./routes/logsStaffRoute";
+import logsCoffreRoute from "./routes/logsCoffreRoute";
 
 
 
@@ -36,6 +37,7 @@ app.use("/api/v1/logs/entreprise", logsEntrepriseRoute)
 app.use("/api/v1/logs/illegal", logsIllegalRoute)
 app.use("/api/v1/logs/inventory", logsInventoryRoute)
 app.use("/api/v1/logs/staff", logsStaffRoute)
+app.use("/api/v1/logs/coffre",logsCoffreRoute)
 app.use("/api/v1/indexes", indexRoute);
 
 
@@ -54,5 +56,7 @@ app.use((req, res, next) => {
     next(new NotFoundError());
 });
 app.use(errorHandler);
+
+
 
 export default app;

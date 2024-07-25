@@ -69,6 +69,8 @@ query.montant = genrateFilterMontant(montant)
                 {"actions.tikttokContent": {$regex: search, $options: 'i'}},
                 {"actions.uploadsContent": {$regex: search, $options: 'i'}},
                 {"actions.uploadsAttachment": {$regex: search, $options: 'i'}},
+                {"actions.plaque": {$regex: search, $options: 'i'}},
+                {"actions.namePlayer": {$regex: search, $options: 'i'}},
             ]
         }
     }
